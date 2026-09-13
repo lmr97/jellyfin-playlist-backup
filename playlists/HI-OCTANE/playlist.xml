@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Item>
+  <Added>04/16/2025 04:39:09</Added>
+  <LockData>false</LockData>
+  <LocalTitle>HI-OCTANE</LocalTitle>
+  <RunningTime>32</RunningTime>
+  <Genres>
+    <Genre>Rock</Genre>
+    <Genre>Metal</Genre>
+    <Genre>Industrial Hardcore</Genre>
+    <Genre>Thrash Metal</Genre>
+    <Genre>Uptempo Hardcore</Genre>
+    <Genre>Hardcore</Genre>
+  </Genres>
+  <OwnerUserId>cd4f3b2c4b0342259a55eb7bcae74082</OwnerUserId>
+  <PlaylistItems>
+    <PlaylistItem>
+      <Path>/media/Music/Five Finger Death Punch/American Capitalist/03 The Pride.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/System Of A Down/Toxicity/06 Chop Suey!.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/I_Gor/Rage EP/02 Rage.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Toxic Holocaust/Chemistry of Consciousness (Deluxe Version)/05 Out of the Fire.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Kutski/The Hardest Records in the World, Vol. 2 (Mixed by Kutski)/23 Attack Em.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Shadows Fall/The War Within/01 The Light That Blinds.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Hardbouncer/Agression EP/Jam Pumper.mp3</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/D-Passion/Where Are U Now/Where Are U Now.mp3</Path>
+    </PlaylistItem>
+  </PlaylistItems>
+  <Shares />
+  <PlaylistMediaType>Audio</PlaylistMediaType>
+</Item>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Item>
+  <Added>04/16/2025 04:38:44</Added>
+  <LockData>false</LockData>
+  <LocalTitle>THRASH RAMPAGE</LocalTitle>
+  <RunningTime>30</RunningTime>
+  <Genres>
+    <Genre>Metal</Genre>
+    <Genre>Thrash Metal</Genre>
+  </Genres>
+  <OwnerUserId>cd4f3b2c4b0342259a55eb7bcae74082</OwnerUserId>
+  <PlaylistItems>
+    <PlaylistItem>
+      <Path>/media/Music/System of a Down/Hypnotize/01 Attack.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Kreator/Gods of Violence/08 Lion with Eagle Wings.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Toxic Holocaust/Chemistry of Consciousness (Deluxe Version)/05 Out of the Fire.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Kreator/Gods of Violence/02 World War Now.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Possessed/Seven Churches/01 The Exorcist.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Alien Weaponry/Tu/04 Raupatu.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Kreator/Coma of Souls/01 When the Sun Burns Red (2018 - Remaster).m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Sodom/Code Red/02 Code Red.m4a</Path>
+    </PlaylistItem>
+  </PlaylistItems>
+  <Shares />
+  <PlaylistMediaType>Audio</PlaylistMediaType>
+</Item>

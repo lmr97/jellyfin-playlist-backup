@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Item>
+  <Added>12/08/2025 00:36:03</Added>
+  <LockData>false</LockData>
+  <LocalTitle>Christmas Specialties</LocalTitle>
+  <RunningTime>54</RunningTime>
+  <Genres>
+    <Genre>Electronic</Genre>
+    <Genre>Dance</Genre>
+    <Genre>Holiday</Genre>
+  </Genres>
+  <OwnerUserId>00000000000000000000000000000000</OwnerUserId>
+  <PlaylistItems>
+    <PlaylistItem>
+      <Path>/media/Music/Compilations/hOMe for the Holidays/05 Still Still Still.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Compilations/hOMe for the Holidays/09 O Christmas Tree.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Compilations/hOMe for the Holidays/04 Winter Wonderland.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Kaskade/Kaskade Christmas/01 Christmas Is Here (feat. Late Night Alumni).m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Kaskade/Kaskade Christmas/02 Cold December.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Shawn Lee's Ping Pong Orchestra/A Very Ping Pong Christmas_ Funky Treats from Santa's Bag/10 Carol of the Bells.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Compilations/The Blenders Christmas Collection/1-10 It's The Most Wondeful Time Of The Year.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Compilations/The Blenders Christmas Collection/1-01 The Christmas Song.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Compilations/The Blenders Christmas Collection/1-02 Do You Hear What I Hear.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Compilations/The Blenders Christmas Collection/1-04 The First Noel.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Compilations/The Blenders Christmas Collection/1-13 It Came Upon A Midnight Clear.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Compilations/The Blenders Christmas Collection/1-17 Silent Night.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Compilations/The Blenders Christmas Collection/1-16 I'll Be Home For Christmas.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Compilations/The Blenders Christmas Collection/2-12 Away In A Manger.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Compilations/The Blenders Christmas Collection/2-08 O Come All Ye Faithful.m4a</Path>
+    </PlaylistItem>
+  </PlaylistItems>
+  <Shares />
+  <PlaylistMediaType>Audio</PlaylistMediaType>
+</Item>

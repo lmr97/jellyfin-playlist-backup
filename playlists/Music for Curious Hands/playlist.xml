@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Item>
+  <Added>04/16/2025 04:39:13</Added>
+  <LockData>false</LockData>
+  <LocalTitle>Music for Curious Hands</LocalTitle>
+  <RunningTime>53</RunningTime>
+  <Genres>
+    <Genre>Electronica</Genre>
+    <Genre>Soundtrack</Genre>
+    <Genre>Techno</Genre>
+    <Genre>Ambient</Genre>
+    <Genre>Electronic</Genre>
+    <Genre>IDM/Experimental</Genre>
+  </Genres>
+  <OwnerUserId>cd4f3b2c4b0342259a55eb7bcae74082</OwnerUserId>
+  <PlaylistItems>
+    <PlaylistItem>
+      <Path>/media/Music/Herbert/Scale/08 Down.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Vangelis/Blade Runner (Original Motion Picture Soundtrack)/07 Blade Runner Blues.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Holly Herndon/Platform/01 Interference.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Ital Tek/Hollowed/10 Reflection Through Destruction.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Compilations/The World of Monnom Black/07 Pleroma.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/CMD094/Heaven - EP/04 Heaven.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Arca/Xen (_____ Edition)/12 Wound.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Outback/Sugarblood/04 The Pillow.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Outback/Sugarblood/05 Everything That Can.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Outback/Sugarblood/06 Tongue Division.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Outback/Sugarblood/07 Clench.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Schacke/Artificial Intercourse - EP/01 All over My Body.m4a</Path>
+    </PlaylistItem>
+  </PlaylistItems>
+  <Shares />
+  <PlaylistMediaType>Audio</PlaylistMediaType>
+</Item>

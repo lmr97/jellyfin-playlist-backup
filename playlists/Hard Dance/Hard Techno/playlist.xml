@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Item>
+  <Added>04/16/2025 04:38:38</Added>
+  <LockData>false</LockData>
+  <LocalTitle>Hard Techno</LocalTitle>
+  <RunningTime>26</RunningTime>
+  <Genres>
+    <Genre>Minimal Techno</Genre>
+    <Genre>Techno</Genre>
+    <Genre>Hard Techno</Genre>
+  </Genres>
+  <OwnerUserId>00000000000000000000000000000000</OwnerUserId>
+  <PlaylistItems>
+    <PlaylistItem>
+      <Path>/media/Music/Compilations/Yin &amp;amp; Yang EP 2/03 Re-Animator.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Darmec/Cryogenian - Single/01 Cryogenian.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Darmec/Rust - Single/Rust (Original Mix).mp3</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/VARIOUS ARTISTS/Just Undefined Free Series 01/02 Neogenesis.m4a</Path>
+    </PlaylistItem>
+    <PlaylistItem>
+      <Path>/media/Music/Franky-B/Rave Anomalies - Single/02 Equation.m4a</Path>
+    </PlaylistItem>
+  </PlaylistItems>
+  <Shares />
+  <PlaylistMediaType>Audio</PlaylistMediaType>
+</Item>
