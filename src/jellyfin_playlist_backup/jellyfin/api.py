@@ -35,7 +35,9 @@ class PlaylistRequestBase(BaseModel):
     IsPublic: bool = False
 
 class PlaylistUpdateRequest(PlaylistRequestBase):
-    Id: str
+    # field doesn't exist for this model in API; simply 
+    # used to keep track of the value here in the program
+    Id: str 
 
 class PlaylistCreateRequest(PlaylistRequestBase):
     UserId: str

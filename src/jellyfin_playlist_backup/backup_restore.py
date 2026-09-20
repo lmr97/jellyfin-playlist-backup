@@ -126,12 +126,14 @@ def restore_playlists(cli_args: Namespace):
 
             req_url = url
 
+            # Id field doesn't exist in Jellyfin API schema for this model
+            update_payload = pl.model_dump(exclude={"Id"})
+
             if cli_args.mode == "update":
                 req_url = f"{url}/{pl.Id}"
 
             elif cli_args.mode == "create":
-                model_dict = pl.model_dump(exclude={"Id"})
-                pl = PlaylistCreateRequest(**model_dict, UserId=user_id)
+                pl = PlaylistCreateRequest(**update_payload, UserId=user_id)
 
             if cli_args.dry_run:
                 print("On dry-run mode. Here's the request that would be sent to the server:")
@@ -142,14 +144,14 @@ def restore_playlists(cli_args: Namespace):
                 for k, v in sesh.headers.items():
                     print(f"{k}: {v}")
                 print()
-                print(pl.model_dump_json(indent=4))
+                print(json.dumps(update_payload, indent=4))
                 continue
 
             if pl.Name in cli_args.skip:
                 print(f"{pl.Name} in skip list, skipping...", file=sys.stderr)
                 continue
             
-            resp = sesh.post(req_url, json=pl.model_dump())
+            resp = sesh.post(req_url, json=update_payload)
 
             if resp.status_code == 403:
                 print("This playlist is not owned by you; you'll need to delete and recreate it.", file=sys.stderr)
