@@ -8,8 +8,8 @@ from urllib.parse import urlparse
 
 from pydantic import BaseModel
 
-from jellyfin.api import PlaylistFull, LibraryItem, PlaylistCreateRequest, PlaylistUpdateRequest, APIResponse, UserPermissions
-from utilities import get_auth_from_env, BASE_URL
+from .jellyfin.api import PlaylistFull, LibraryItem, PlaylistCreateRequest, PlaylistUpdateRequest, APIResponse, UserPermissions
+from .utilities import get_auth_from_env, BASE_URL
 
 
 class Backup(str, Enum):

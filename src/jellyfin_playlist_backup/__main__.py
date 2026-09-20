@@ -1,6 +1,6 @@
 from argparse import ArgumentParser, Namespace
 
-from backup_restore import back_up_playlists, restore_playlists
+from .backup_restore import back_up_playlists, restore_playlists
 
 
 def parse_cli_args() -> Namespace:
