@@ -1,7 +1,6 @@
 from argparse import ArgumentParser, Namespace
-from pathlib import Path
 
-from jellyfin_playlist_backup.backup_restore import back_up_playlists, restore_playlists
+from .backup_restore import back_up_playlists, restore_playlists
 
 
 def parse_cli_args() -> Namespace:
@@ -14,10 +13,11 @@ def parse_cli_args() -> Namespace:
     backup = sub_ap.add_parser("backup", help="Back up playlists to file")
     backup.add_argument(
         "--output", "-o", 
+        dest="output",
         help="Write backup data to JSON file. Normally is formatted as a " + 
             "list of objects that can be used as payloads to create playlists " +
             "via the API, unless --full is specified. Defaults to stdout.",
-        type=Path,
+        type=str,
         metavar="FILE",
         default="-"
     )
@@ -35,12 +35,16 @@ def parse_cli_args() -> Namespace:
         default=[],
         nargs="*"
     )
+    backup.add_argument(
+        "--url",
+        help="Base URL, overrides the hardcoded one."
+    )
     backup.set_defaults(func=back_up_playlists)
 
     restore = sub_ap.add_parser("restore", help="Restore playlists from file")
     restore.add_argument(
         "--file", "-f",
-        type=Path,
+        type=str,
         help="Restore playlists from this file."
     )
     restore.add_argument(

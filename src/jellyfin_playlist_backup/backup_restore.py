@@ -3,6 +3,7 @@ from datetime import datetime
 import json
 from enum import Enum
 import requests
+import sys
 from urllib.parse import urlparse
 
 from pydantic import BaseModel
@@ -27,11 +28,12 @@ class PlaylistsBackup[PlaylistType](BaseModel):
 
 def back_up_playlists(cli_args: Namespace):
 
-    print("Playlist backup started.")
+    print("Playlist backup started.", file=sys.stderr)
 
     api_key, user_id = get_auth_from_env()
 
-    url = f"{BASE_URL}/Items"
+    base_url = cli_args.url or BASE_URL
+    url = f"{base_url}/Items"
     query = {
         "includeItemTypes": "Playlist",
         "recursive": True,
@@ -47,10 +49,10 @@ def back_up_playlists(cli_args: Namespace):
         playlists = []
 
         for pl in playlist_metadata.Items:
-            print(f"Backing up {pl.Name}...")
+            print(f"Backing up {pl.Name}...", file=sys.stderr)
             song_list = []
         
-            url = f"{BASE_URL}/Playlists/{pl.Id}/Items"
+            url = f"{base_url}/Playlists/{pl.Id}/Items"
             song_list_resp = session.get(url, params={"userId": user_id, "fields": ["Path"]})
             song_list_resp_content = APIResponse.model_validate(song_list_resp.json())
             song_list = song_list_resp_content.Items
@@ -67,7 +69,7 @@ def back_up_playlists(cli_args: Namespace):
                     Ids=songs_ids
                 )
             if plp.Name in cli_args.skip:
-                print(f"{plp.Name} in skip list, skipping...")
+                print(f"{plp.Name} in skip list, skipping...", file=sys.stderr)
                 continue
             
             playlists.append(plp)
@@ -83,8 +85,9 @@ def back_up_playlists(cli_args: Namespace):
 
     if cli_args.output == "-":
         print(raw_backup)
+        return
     else:
-        with open(cli_args.output, mode="w") as playlist_file:
+        with open(cli_args.output, mode="w+") as playlist_file:
             playlist_file.write(raw_backup)
 
     msg = "Playlist backup complete."
@@ -119,7 +122,7 @@ def restore_playlists(cli_args: Namespace):
 
         url = f"{BASE_URL}/Playlists"
         for pl in payloads:
-            print(f"Updating playlist {pl.Name}...")
+            print(f"Updating playlist {pl.Name}...", file=sys.stderr)
 
             req_url = url
 
@@ -143,13 +146,13 @@ def restore_playlists(cli_args: Namespace):
                 continue
 
             if pl.Name in cli_args.skip:
-                print(f"{pl.Name} in skip list, skipping...")
+                print(f"{pl.Name} in skip list, skipping...", file=sys.stderr)
                 continue
             
             resp = sesh.post(req_url, json=pl.model_dump())
 
             if resp.status_code == 403:
-                print("This playlist is not owned by you; you'll need to delete and recreate it.")
+                print("This playlist is not owned by you; you'll need to delete and recreate it.", file=sys.stderr)
                 unowned_playlists.append(pl.Name)
             else:
                 resp.raise_for_status() 
@@ -167,7 +170,7 @@ def refresh_song_cache(session: requests.Session) -> list[LibraryItem]:
         "fields": ["Path"]
     }
     
-    print("Refreshing song info cache...")
+    print("Refreshing song info cache...", file=sys.stderr)
     songs_resp = session.get(url, params=query)
     songs_resp.raise_for_status()
     song_data = songs_resp.json()
@@ -175,6 +178,6 @@ def refresh_song_cache(session: requests.Session) -> list[LibraryItem]:
     with open("songs.json", mode="w") as song_file:
         json.dump(song_data, song_file, indent=4)
 
-    print("Songs refreshed.")
+    print("Songs refreshed.", file=sys.stderr)
 
     return song_data["Items"]
