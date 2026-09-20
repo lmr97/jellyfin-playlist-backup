@@ -1,5 +1,5 @@
 from pathlib import Path
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 class LibraryItem(BaseModel):
     Name: str
@@ -24,7 +24,19 @@ class APIResponse(BaseModel):
 class PlaylistFull(LibraryItem):
     Songs: list[LibraryItem]
 
-class PlaylistUpdateRequest(BaseModel):
-    name: str
-    id: str | None
-    song_ids: list[str]
+class UserPermissions(BaseModel):
+    UserId: str
+    CanEdit: bool = True
+
+class PlaylistRequestBase(BaseModel):
+    Name: str
+    Ids: list[str]
+    Users: list[UserPermissions]
+    IsPublic: bool = False
+
+class PlaylistUpdateRequest(PlaylistRequestBase):
+    Id: str
+
+class PlaylistCreateRequest(PlaylistRequestBase):
+    UserId: str
+    MediaType: str = "Audio"

@@ -5,7 +5,7 @@
             "type": "debugpy",
             "request": "launch",
             "program": "${file}",
-            "args": ["--skip", "for sabrina <3", "Hard Dance", "Conscious Rap", "museum", "Gigerism", "Electronic Music for People Who Hate Electronic Music", "deconstructed club", "Massage 😌", "Chillin': Day Vibes", "Metal", "Music for MASSIVE Speakers", "Urban Night Driving", "Glorious Soundtracks", "Electro House", "Neo's iPod", "Chillin'_ Night Vibes", "Archive", "Music for Curious Hands", "SWEET HYPE", "Metal for Sabrina", "depressy", "PC MUSIC ♩", "HI-OCTANE", "Hard Rock _ Metalcore", "shining void", "Favorite Songs of All Time", "Sunset Club", "Road Trip Export 2", "Oldschool Dubstep", "Heavy Dubstep", "--recache", "playlists", "."]
+            "args": ["restore", "--file", "./demo.bak.json", "--dry-run"]
         }
     ]
 }
