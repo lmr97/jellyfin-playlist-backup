@@ -1,6 +1,6 @@
 from argparse import ArgumentParser, Namespace
 
-from .backup_restore import back_up_playlists, restore_playlists
+from backup_restore import back_up_playlists, restore_playlists
 
 
 def parse_cli_args() -> Namespace:
@@ -51,8 +51,10 @@ def parse_cli_args() -> Namespace:
         "--mode", "-m",
         help="Whether to create a new playlist with the backup ('create') or " + 
             "set the list of songs for a playlist of the same name ('update'). " +
-            "This overwrites the existing songs in the playlist.",
-        default="update",
+            "This overwrites the existing songs in the playlist. Updating is having " +
+            "issues, which seem to go back to the API itself (it only allows user token "
+            "bearer to do this), so use 'create'.",
+        default="create",
         choices=["create", "update"]
     )
     restore.add_argument(

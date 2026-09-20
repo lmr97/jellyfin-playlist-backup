@@ -8,8 +8,8 @@ from urllib.parse import urlparse
 
 from pydantic import BaseModel
 
-from .jellyfin.api import PlaylistFull, LibraryItem, PlaylistCreateRequest, PlaylistUpdateRequest, APIResponse, UserPermissions
-from .utilities import get_auth_from_env, BASE_URL
+from jellyfin.api import PlaylistFull, LibraryItem, PlaylistCreateRequest, PlaylistUpdateRequest, APIResponse, UserPermissions
+from utilities import get_auth_from_env, BASE_URL
 
 
 class Backup(str, Enum):
@@ -129,11 +129,13 @@ def restore_playlists(cli_args: Namespace):
             # Id field doesn't exist in Jellyfin API schema for this model
             update_payload = pl.model_dump(exclude={"Id"})
 
+            # currently not working via the API
             if cli_args.mode == "update":
                 req_url = f"{url}/{pl.Id}"
 
             elif cli_args.mode == "create":
-                pl = PlaylistCreateRequest(**update_payload, UserId=user_id)
+                pcr = PlaylistCreateRequest(**update_payload, UserId=user_id)
+                update_payload = pcr.model_dump()
 
             if cli_args.dry_run:
                 print("On dry-run mode. Here's the request that would be sent to the server:")
@@ -150,7 +152,7 @@ def restore_playlists(cli_args: Namespace):
             if pl.Name in cli_args.skip:
                 print(f"{pl.Name} in skip list, skipping...", file=sys.stderr)
                 continue
-            
+
             resp = sesh.post(req_url, json=update_payload)
 
             if resp.status_code == 403:
